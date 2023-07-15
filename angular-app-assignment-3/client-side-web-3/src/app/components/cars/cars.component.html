@@ -1,0 +1,21 @@
+<div class="bg-color">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="text-center text-warning">Cars</h1>
+          </div>
+      </div>
+      <div class='row'>
+        <div class='col-lg-5 col-md-5 col-sm-5 main' *ngFor="let element of cars;let i = index">
+          <img src="assets/images/img4.jpg" alt='' class='image'>
+          <h4 class='text-light font-9'>Sr No: <span class='elestyle text-primary'>{{i+1}}</span></h4>
+          <h4 class='text-light font-9'>Make: <span class='elestyle text-primary'>{{element.make}}</span></h4>
+          <h4 class='text-light font-9'>Model: <span class='elestyle text-primary'>{{element.model}}</span></h4>
+          <h4 class='text-light font-9'>Color: <span class='elestyle text-primary'>{{element.color}}</span></h4>
+          <h4 class='text-light font-9'>Price: <span class='elestyle text-primary'>{{element.price}}</span></h4>
+          <h4 class='text-light font-9'>Category: <span class='elestyle text-primary'>{{element.category_name}}</span></h4>
+        </div>
+      </div>
+  </div>
+  </div>
+  

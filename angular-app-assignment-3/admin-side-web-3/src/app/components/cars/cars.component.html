@@ -1,0 +1,14 @@
+<div class='row'>
+    <div class='col-lg-5 col-md-5 col-sm-5 main' *ngFor="let element of cars;let i = index">
+      <img src="assets/images/img4.jpg" alt='' class='image-styles'>
+      <h4 class='text-light font-9'>Sr No: <span class='car-ele'>{{i+1}}</span></h4>
+      <h4 class='text-light font-9'>Make: <span class='car-ele'>{{element.make}}</span></h4>
+      <h4 class='text-light font-9'>Model: <span class='car-ele'>{{element.model}}</span></h4>
+      <h4 class='text-light font-9'>Color: <span class='car-ele'>{{element.color}}</span></h4>
+      <h4 class='text-light font-9'>Price: <span class='car-ele'>{{element.price}}</span></h4>
+      <h4 class='text-light font-9'>Category: <span class='car-ele'>{{element.category_name}}</span></h4>
+      <button class="btn btn-danger btn-style pull-left" (click)="delete(element.car_id)">Delete</button>
+      &nbsp;
+      <button class="btn btn-info btn-style pull-right" (click)="goToUpdate(element.car_id)">Update</button>
+    </div>
+  </div>

@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-lg-12">
+     <div class="image-div">
+      <img src="assets/images/img6.jpg" alt="" class="car-img">
+     </div>
+  </div>
+</div>
+<div class="container custom-font">
+  <h4 class="text-success custom-font">Greetings!</h4>
+  <p class="custom-font">{{ date | date:'medium' }}</p>
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="car-site">Welcome to Car hiring site!</h2>
+      <p class="site-det"> You can view all avaiable cars in our site digitally,
+         online way. We can add, update, remove car on the demand of our clients. <br> All the updates you can view here. </p>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="text-center text-danger">All Cars</h1>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Sr. No</th>
+            <th>Car Make Company</th>
+            <th>Car Model</th>
+            <th>Car Color</th>
+            <th>Car Price</th>
+            <th>Car Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of AllCars;let i = index">
+            <td class="display-6">{{i+1}}</td>
+            <td class="display-5">{{item.make}}</td>
+            <td class="display-5">{{item.model}}</td>
+            <td class="display-5">{{item.color}}</td>
+            <td class="display-5">{{item.price}}</td>
+            <td class="display-5">{{item.category_name}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

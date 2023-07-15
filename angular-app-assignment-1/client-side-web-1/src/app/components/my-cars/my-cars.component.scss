@@ -1,0 +1,20 @@
+.display-6{
+    font-size: 16px;
+    color: #337ab7;
+}
+
+.car-site{
+    color: #F7685B;
+}
+.site-det{
+    color: #885AF8;
+}
+.image-div{
+    height: 500px;
+    width: 100%;
+    .car-img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

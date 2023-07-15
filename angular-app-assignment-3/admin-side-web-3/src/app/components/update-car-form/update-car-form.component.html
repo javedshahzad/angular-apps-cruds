@@ -1,0 +1,39 @@
+<div class="bg-color">
+  <div class="container">
+    <i class="fa fa-arrow-left back-btn" routerLink="/home"></i>
+    <h1 class="text-center text-info">Update Car</h1>
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <p class="text-warning">Please fill all details to Update car!</p>
+          <div class="form-group">
+            <label for="email">Make:</label>
+            <input type="text" class="form-control form-input-style" placeholder="Enter make" name="make" [(ngModel)]="updateCar.make">
+          </div>
+          <div class="form-group">
+            <label for="Model">Model:</label>
+            <input type="text" class="form-control form-input-style" placeholder="Enter model" name="model" [(ngModel)]="updateCar.model">
+          </div>
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" class="form-control form-input-style" placeholder="Enter price" name="price" [(ngModel)]="updateCar.price">
+          </div>
+          <div class="form-group">
+            <label for="color">Color:</label>
+            <input type="text" class="form-control form-input-style" placeholder="Enter color" name="color" [(ngModel)]="updateCar.color">
+          </div>
+          <div class="form-group">
+            <label for="sel1">Category:</label>
+            <select class="form-control form-input-style" [(ngModel)]="updateCar.category_id">
+              <option value="" selected>Select Category</option>
+              <option value="1">4WD</option>
+              <option value="2">Sedan</option>
+              <option value="3">Hatch</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-info btn-block" (click)="onUpdateCar()">Update Car</button>
+      </div>
+      <div class="col-lg-3"></div>
+    </div>
+  </div>
+</div>

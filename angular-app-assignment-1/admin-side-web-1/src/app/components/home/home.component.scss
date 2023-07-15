@@ -1,0 +1,23 @@
+.add-car{
+    float: right;
+    margin: 10px 0;
+    padding: 15px;
+    width: 180px;
+}
+.image-div{
+    height: 500px;
+    width: 100%;
+    .car-img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.car-site{
+    color: #F7685B;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.site-det{
+    color: #885AF8;
+    font-family: 'Courier New', Courier, monospace;
+}

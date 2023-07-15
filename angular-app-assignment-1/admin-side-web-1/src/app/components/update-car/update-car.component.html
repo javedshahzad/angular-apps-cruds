@@ -1,0 +1,33 @@
+<div class="container custom-font">
+    <i class="fa fa-arrow-circle-left btn-back" routerLink="/home"></i>
+    <h2 class="text-center text-success">Update Car Details</h2>
+    <form [formGroup]="Updateform">
+      <div class="form-group">
+        <label for="email">Car Make Company:</label>
+        <input type="text" class="form-control" placeholder="Enter make" name="make" formControlName="make">
+      </div>
+      <div class="form-group">
+        <label for="Model">Car Model:</label>
+        <input type="text" class="form-control" placeholder="Enter model" name="model" formControlName="model">
+      </div>
+      <div class="form-group">
+        <label for="price">Car Price:</label>
+        <input type="number" class="form-control" placeholder="Enter price" name="price" formControlName="price">
+      </div>
+      <div class="form-group">
+        <label for="color">Car Color:</label>
+        <input type="text" class="form-control" placeholder="Enter color" name="color" formControlName="color">
+      </div>
+      <div class="form-group">
+        <label for="sel1">Select Car Category:</label>
+        <select class="form-control" formControlName="category_id">
+          <option value="" selected>Select Car Category</option>
+          <option value="1">4WD</option>
+          <option value="2">Sedan</option>
+          <option value="3">Hatch</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success btn-block" [disabled]="!Updateform.valid" (click)="Update()">Update</button>
+    </form>
+  </div>
+  

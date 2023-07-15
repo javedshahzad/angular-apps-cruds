@@ -1,0 +1,43 @@
+<div class="bg app-font">
+    <div class="container app-font">
+        <h1 class="text-center text-info">Create your own Car!</h1>
+       <div class="row">
+        <div class="col-lg-6">
+            <img src="assets/images/img1.png" alt="" class="image">
+        </div>
+        <div class="col-lg-6">
+            <p class="text-warning">Please type all below fileds to add your new car!</p>
+            <form [formGroup]="CreateCarForm">
+              <div class="form-group">
+                <label for="email">Maker Company of ther Car:</label>
+                <input type="text" class="form-control form-input" placeholder="Enter make" name="make" formControlName="make">
+              </div>
+              <div class="form-group">
+                <label for="Model">Model of The Car:</label>
+                <input type="text" class="form-control form-input" placeholder="Enter model" name="model" formControlName="model">
+              </div>
+              <div class="form-group">
+                <label for="price">Price of The Car:</label>
+                <input type="number" class="form-control form-input" placeholder="Enter price" name="price" formControlName="price">
+              </div>
+              <div class="form-group">
+                <label for="color">Color of The Car:</label>
+                <input type="text" class="form-control form-input" placeholder="Enter color" name="color" formControlName="color">
+              </div>
+              <div class="form-group">
+                <label for="sel1">Category of The Car:</label>
+                <select class="form-control form-input" formControlName="category_id">
+                  <option value="" selected>Select Category</option>
+                  <option value="1">4WD</option>
+                  <option value="2">Sedan</option>
+                  <option value="3">Hatch</option>
+                  <option value="4">Van</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-info btn-block" [disabled]="!CreateCarForm.valid" (click)="AddnewCar()">Click here to Add new Car</button>
+            </form>
+        </div>
+       </div>
+      </div>
+      
+</div>

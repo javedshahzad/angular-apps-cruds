@@ -1,0 +1,33 @@
+<div class="container">
+    <h2 class="text-center text-success custom-font">Add New Car</h2>
+    <p class="text-warning custom-font">Please enter all information to save your car!</p>
+    <form [formGroup]="addCarForms">
+      <div class="form-group">
+        <label for="email" class="custom-font">Car Make Company:</label>
+        <input type="text" class="form-control custom-font" placeholder="Enter make" name="make" formControlName="make">
+      </div>
+      <div class="form-group">
+        <label for="Model" class="custom-font">Car Model:</label>
+        <input type="text" class="form-control custom-font" placeholder="Enter model" name="model" formControlName="model">
+      </div>
+      <div class="form-group">
+        <label for="price" class="custom-font">Car Price:</label>
+        <input type="number" class="form-control custom-font" placeholder="Enter price" name="price" formControlName="price">
+      </div>
+      <div class="form-group">
+        <label for="color" class="custom-font">Car Color:</label>
+        <input type="text" class="form-control custom-font" placeholder="Enter color" name="color" formControlName="color">
+      </div>
+      <div class="form-group">
+        <label for="sel1" class="custom-font">Select car Category:</label>
+        <select class="form-control custom-font" formControlName="category_id">
+          <option value="" selected>Select Category</option>
+          <option value="1">4WD</option>
+          <option value="2">Sedan</option>
+          <option value="3">Hatch</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-warning btn-block custom-btn" [disabled]="!addCarForms.valid" (click)="AddnewCar()">Save Car</button>
+    </form>
+  </div>
+  

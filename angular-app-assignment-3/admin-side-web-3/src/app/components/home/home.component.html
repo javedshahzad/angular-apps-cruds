@@ -1,0 +1,27 @@
+<ng-container *ngIf="isCar === 1">
+  <div class="bg-color">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="image-div">
+          <img src="assets/images/img9.png" alt="" class="car-img">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <button class="btn btn-danger new-Car-btn btn-block" (click)="addnewCar()">+ Create New Car</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center text-primary">Cars</h1>
+        </div>
+      </div>
+      <app-cars [cars]="Cars" (onDeleteCar)="DeleteCar($event)"></app-cars>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="isCar === 2">
+  <app-create-car (onAddNewCar)="onAddCar($event)"></app-create-car>
+</ng-container>
